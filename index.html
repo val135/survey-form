@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="banner">
+        <a href="#"><img src="images/logo-viajectdotas-16.png" alt="logo Viajecdotas"></a>
+        <a href="http://www.viajecdotas.com">Ir al sitio web</a>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 id="title">Cotiza tu viaje con nosotros</h1>
+            <p id="description">Rellena el formulario y pronto nos pondremos en contacto contigo</p>
+        </header>
+        
+        <main>
+            <form id="survey-form" action="#" target="" method="get" name="travelers-info">
+                
+                <div class="question">
+                    <label for="name">Nombre</label>
+                    <input class="form-text" type="text" name="name" id="name" placeholder="Nombre completo" required/>
+                </div>
+
+                <div class="question">
+                    <label for="email">E-mail</label>
+                    <input class="form-text" type="text" name="email" id="email" placeholder="Correo electrónico" required title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$"/>
+                </div>
+
+                <div class="question">
+                    <label for="number">Edad</label>
+                    <input class="form-text" type="number" name="number" id="number" value="" min="1" max="95" placeholder="Edad (opcional)">
+                </div>
+                
+                <!--
+                <div class="question-dropdown">
+                <p class="extra-text">¿Cuál es el objetivo de tu viaje</p>
+                    <input class="form-text" type="text" list="dropdown">
+                            <datalist id="dropdown">
+                                <option value="Negocios"></option>
+                                <option value="Turismo"></option>
+                                <option value="Estudios"></option>
+                                <option value="Otro"></option>
+                            </datalist>
+                </div>
+                 -->
+                
+                 <div class="question-dropdown">
+                    <p class="extra-text">¿Cuál es el objetivo de tu viaje?</p>
+                 </div>
+                <div class="questions-select">                   
+                        <div class="select">
+                            <select name="questions-select" id="questions-select">
+                                <option value="turismo" selected="selected">Turismo</option>
+                                <option value="negocios">Negocios</option>
+                                <option value="estudios">Estudios</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>                    
+                 </div>
+
+
+                <div class="question">
+                    <label for="start">Fecha de inicio del viaje:</label>
+                    <input class="form-text" type="date" id="start" name="trip-start" value="2020-03-20" min="2020-01-01" max="2021-12-31" required>
+                        <span class="validity"></span>    
+                    </div>
+                
+                <div class="question">
+                    <p class="extra-text">¿Qué tipo de viaje buscas?</p>
+                    <label><input class="radio-buttons" type="radio" id="economico" name="travel-type" value="economico">Económico</label>               
+                    <label><input class="radio-buttons" type="radio" id="regular" name="travel-type" value="regular">Regular</label>                   
+                    <label><input class="radio-buttons" type="radio" id="lujo" name="travel-type" value="lujo">De lujo</label>                                               
+                </div>
+
+                    <div class="question">
+                        <p class="extra-text">¿Con quién planeas viajar? (Puedes seleccionar varias opciones)</p>
+                        <label><input class="radio-buttons" type="checkbox" id="solo" name="travelers" value="solo">Solo</label>               
+                        <label><input class="radio-buttons" type="checkbox" id="amigos" name="travelers" value="amigos" checked>Con amigos</label>
+                        <label><input class="radio-buttons" type="checkbox" id="pareja" name="travelers" value="pareja">Con mi pareja</label>
+                        <label><input class="radio-buttons" type="checkbox" id="familia" name="travelers" value="familia">En familia</label>
+                    </div>
+
+                <div>
+                    <p class="extra-text">Agrega más detalles de tu viaje</p>
+                    <textarea class="medium-area" placeholder="Cuéntanos sobre tu destino y quiénes te acompañan" cols="30" rows="5" width="400px"></textarea>
+                </div>
+                <div>
+                    <button class="submit-button" type="submit" id="submit">Enviar</button>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+        </footer>
+    </div>
+</body>
+</html>
